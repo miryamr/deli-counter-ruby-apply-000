@@ -1,6 +1,7 @@
 # Write your code here.
 require 'pry'
 katz_deli = []
+counter = 0
 
 def line(katz_deli)
   if katz_deli.empty?
@@ -14,11 +15,17 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, name)
-  katz_deli.push(name)
-  position = katz_deli.index(name)
-      puts "Welcome, #{name}. You are number #{katz_deli.index(name)+1} in line."
-end
+# def take_a_number(katz_deli, name)
+#   katz_deli.push(name)
+#   position = katz_deli.index(name)
+#       puts "Welcome, #{name}. You are number #{katz_deli.index(name)+1} in line."
+# end
+
+def take_a_number(katz_deli)
+  counter += 1
+  katz_deli.push(counter)
+  return "Welcome, your ticket number is #{counter}"
+end 
 
 def now_serving(katz_deli)
   if katz_deli.empty? == true
