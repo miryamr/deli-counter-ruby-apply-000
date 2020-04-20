@@ -25,7 +25,7 @@ def take_a_number(katz_deli)
   counter += 1
   katz_deli.push(counter)
   return "Welcome, your ticket number is #{counter}"
-end 
+end
 
 def now_serving(katz_deli)
   if katz_deli.empty? == true
